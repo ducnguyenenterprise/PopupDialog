@@ -117,7 +117,7 @@ final internal class ZoomTransition: TransitionAnimator {
         switch direction {
         case .in:
             to.view.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-            UIView.animate(withDuration: 0.6, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: [.curveEaseOut], animations: { [weak self] in
+            UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: [.curveEaseInOut], animations: { [weak self] in
                 guard let self = self else { return }
                 self.to.view.transform = CGAffineTransform(scaleX: 1, y: 1)
             }, completion: { _ in
